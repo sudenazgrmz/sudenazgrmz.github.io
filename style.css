@@ -1,0 +1,115 @@
+/* Genel Ayarlar */
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    margin: 50px;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* 1. Menü Tasarımı (Hiyerarşik Seçici Kullanımı) */
+nav ul {
+    list-style-type: none;
+    text-align: right;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block; /* Ödevin istediği yöntem */
+    margin-left: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    padding: 8px 15px;
+    font-size: 14px;
+    transition: 0.3s; /* Hover efekti için yumuşatıcı */
+}
+
+/* Hover Efekti */
+nav ul li a:hover {
+    color: #000;
+    background-color: #e9ecef;
+    border-radius: 4px;
+}
+
+nav ul li a.active {
+    background-color: #7d97de;
+    color: white;
+    border-radius: 4px;
+}
+
+/* 2. Header & Metin Düzenlemeleri (Grup Seçici Kullanımı) */
+header h1, .content-box h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #666;
+    line-height: 1.6;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+/* 3. İki Sütunlu Düzen */
+main {
+    margin-top: 20px;
+}
+
+.content-box {
+    display: inline-block; /* Yan yana getirme */
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 5px;
+    min-height: 200px;
+}
+
+.left-box {
+    width: 48%;
+    background-color: #fef5e7; /* Sarımsı ton */
+    border: 1px solid #f9e1bc;
+    margin-right: 3%;
+}
+
+.right-box {
+    width: 48%;
+    background-color: #e8f4f8; /* Mavimsi ton */
+    border: 1px solid #cfe2e9;
+}
+
+/* İçerik Metin Özellikleri (Hiyerarşik Seçici) */
+.content-box p {
+    font-size: 13px;
+    color: #444;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* 4. Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 12px;
+    color: #888;
+}
+
+form input, form textarea {
+    width: 90%;
+    padding: 8px;
+    margin-top: 5px;
+}
+form button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+}

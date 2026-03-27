@@ -5,7 +5,7 @@ This project is a multi-page personal portfolio website developed as part of a w
 ## 🚀 Live Demo
 
 You can view the live version here:
-👉 https://sudenazgrmz.github.io/repo-name/
+👉 https://sudenazgrmz.github.io
 
 ---
 

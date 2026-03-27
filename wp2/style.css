@@ -1,115 +1,315 @@
-/* Genel Ayarlar */
+/* =============================================
+   FLEXBOX LAB ÖDEVİ — style.css
+   ============================================= */
+
+/* --- Reset & Temel --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    background-color: #f0f2f5;
-    font-family: Arial, sans-serif;
-    margin: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f7;
+  color: #2d3a4a;
 }
 
-.container {
-    background-color: #ffffff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    max-width: 900px;
-    margin: 0 auto;
+/* =============================================
+   ANA KAPSAYICI
+   - 100vh (zorunlu şart)
+   - flex-direction: column (zorunlu şart)
+   ============================================= */
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;               /* display: flex — 1. alan */
+  flex-direction: column;      /* dikey yerleşim */
+  overflow: hidden;
+  background: #f0f2f7;
 }
 
-/* 1. Menü Tasarımı (Hiyerarşik Seçici Kullanımı) */
-nav ul {
-    list-style-type: none;
-    text-align: right;
-    padding: 0;
+/* =============================================
+   1) NAVBAR — 10vh
+   ============================================= */
+.navbar {
+  height: 10vh;
+  width: 100%;
+  display: flex;               /* display: flex — 2. alan */
+  flex-direction: row;
+  justify-content: space-between;  /* zorunlu: space-between */
+  align-items: center;             /* zorunlu: center */
+  padding: 0 2rem;
+  background: #ffffff;
+  border-bottom: 2px solid #dde3ec;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-nav ul li {
-    display: inline-block; /* Ödevin istediği yöntem */
-    margin-left: 10px;
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #2d3a4a;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #555;
-    padding: 8px 15px;
-    font-size: 14px;
-    transition: 0.3s; /* Hover efekti için yumuşatıcı */
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  list-style: none;
 }
 
-/* Hover Efekti */
-nav ul li a:hover {
-    color: #000;
-    background-color: #e9ecef;
-    border-radius: 4px;
+.nav-links a {
+  text-decoration: none;
+  color: #4a5568;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
-nav ul li a.active {
-    background-color: #7d97de;
-    color: white;
-    border-radius: 4px;
+.nav-links a:hover {
+  color: #5a7fd4;
 }
 
-/* 2. Header & Metin Düzenlemeleri (Grup Seçici Kullanımı) */
-header h1, .content-box h2 {
-    color: #333;
-    margin-bottom: 10px;
+/* =============================================
+   2) HERO — 30vh
+   flex-direction: row, align-items: stretch
+   ============================================= */
+.hero {
+  height: 30vh;
+  display: flex;               /* display: flex — 3. alan */
+  flex-direction: row;         /* zorunlu: row */
+  justify-content: space-between;
+  align-items: stretch;        /* zorunlu: stretch */
+  padding: 1rem 2rem;
+  background: #ffffff;
+  border-bottom: 2px solid #dde3ec;
+  gap: 1.5rem;
 }
 
-header p {
-    color: #666;
-    line-height: 1.6;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 20px;
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  flex: 1;
 }
 
-/* 3. İki Sütunlu Düzen */
-main {
-    margin-top: 20px;
+.hero-text h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2d3a4a;
 }
 
-.content-box {
-    display: inline-block; /* Yan yana getirme */
-    vertical-align: top;
-    box-sizing: border-box;
-    padding: 20px;
-    border-radius: 5px;
-    min-height: 200px;
+.hero-text p {
+  font-size: 0.9rem;
+  color: #6b7a8d;
 }
 
-.left-box {
-    width: 48%;
-    background-color: #fef5e7; /* Sarımsı ton */
-    border: 1px solid #f9e1bc;
-    margin-right: 3%;
+.hero-image {
+  flex: 1;
+  display: flex;
+  align-items: stretch;         /* stretch: yükseklikte esner */
+  border: 2px solid #dde3ec;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #eef1f7;
 }
 
-.right-box {
-    width: 48%;
-    background-color: #e8f4f8; /* Mavimsi ton */
-    border: 1px solid #cfe2e9;
+.hero-image svg {
+  width: 100%;
+  height: 100%;
 }
 
-/* İçerik Metin Özellikleri (Hiyerarşik Seçici) */
-.content-box p {
-    font-size: 13px;
-    color: #444;
-    line-height: 1.5;
-    text-align: justify;
+/* =============================================
+   3) KARTLAR BÖLÜMÜ — 30vh
+   display: flex, flex-wrap: wrap, gap
+   ============================================= */
+.cards-section {
+  height: 30vh;
+  padding: 0.6rem 2rem;
+  background: #f7f9fc;
+  border-bottom: 2px solid #dde3ec;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
-/* 4. Footer */
-footer {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 12px;
-    color: #888;
+.cards-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-form input, form textarea {
-    width: 90%;
-    padding: 8px;
-    margin-top: 5px;
+.cards-header h2 {
+  font-size: 1rem;
+  font-weight: 700;
 }
-form button {
-    margin-top: 10px;
-    padding: 8px 16px;
-    cursor: pointer;
+
+.cards-container {
+  display: flex;               /* display: flex — kart alanı */
+  flex-direction: row;
+  flex-wrap: wrap;             /* zorunlu: wrap */
+  gap: 0.5rem;                 /* zorunlu: gap */
+  align-items: flex-start;
+  flex: 1;
+  overflow: hidden;
+}
+
+.card {
+  background: #ffffff;
+  border: 1.5px solid #dde3ec;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 130px;
+  flex: 1 1 130px;
+  max-width: 200px;
+}
+
+.card h3 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2d3a4a;
+}
+
+.card p {
+  font-size: 0.75rem;
+  color: #6b7a8d;
+}
+
+/* =============================================
+   4) FLEX GROW UYGULAMA — 20vh
+   flex-grow: 1-2-1, align-items: stretch
+   ============================================= */
+.flex-grow-section {
+  height: 20vh;
+  padding: 0.6rem 2rem;
+  background: #ffffff;
+  border-bottom: 2px solid #dde3ec;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.grow-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grow-header h2 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.grow-container {
+  display: flex;               /* display: flex */
+  flex-direction: row;         /* yan yana */
+  align-items: stretch;        /* zorunlu: stretch */
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.grow-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  gap: 0.3rem;
+}
+
+.grow-box strong {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.grow-box small {
+  font-size: 0.75rem;
+  opacity: 0.75;
+}
+
+/* flex-grow değerleri (zorunlu: 1-2-1) */
+.box1 {
+  flex-grow: 1;
+  background: #dce8f5;
+  color: #2a4a7f;
+}
+
+.box2 {
+  flex-grow: 2;
+  background: #d9f0e0;
+  color: #1a5c35;
+}
+
+.box3 {
+  flex-grow: 1;
+  background: #fde8d0;
+  color: #7a3a0a;
+}
+
+/* =============================================
+   5) FOOTER — 10vh
+   justify-content: center, align-items: center
+   ============================================= */
+.footer {
+  height: 10vh;
+  display: flex;               /* display: flex */
+  flex-direction: row;
+  justify-content: center;     /* zorunlu: center */
+  align-items: center;         /* zorunlu: center */
+  background: #eef1f7;
+  color: #6b7a8d;
+  font-size: 0.9rem;
+  border-top: 2px solid #dde3ec;
+}
+
+/* =============================================
+   BUTONLAR
+   ============================================= */
+.btn {
+  display: inline-block;
+  padding: 0.45rem 1.1rem;
+  background: #5a7fd4;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:hover {
+  background: #3d5faa;
+}
+
+.btn-sm {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.78rem;
+}
+
+/* =============================================
+   ETIKETLER (tag)
+   ============================================= */
+.tag-row {
+  display: flex;
+  flex-direction: row;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #eef1f7;
+  border: 1px solid #c9d3e0;
+  border-radius: 4px;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.7rem;
+  color: #5a6a7a;
 }

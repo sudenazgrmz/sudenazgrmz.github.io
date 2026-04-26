@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="tr" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hafta 7 | Etkinlik Kayit Sayfasi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/hafta7.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top border-bottom bg-body-tertiary bg-opacity-75 backdrop-blur">
+    <div class="container py-2">
+      <a class="navbar-brand brand-mark" href="index.html">SNG</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#week7Navbar" aria-controls="week7Navbar" aria-expanded="false" aria-label="Menuyu ac">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="week7Navbar">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="app1.html">App 1</a></li>
+          <li class="nav-item"><a class="nav-link" href="app2.html">App 2</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="hafta7.html">Hafta 7</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero-section py-5 py-lg-6">
+      <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-7">
+            <span class="badge rounded-pill text-bg-warning mb-3 px-3 py-2">Web Programlama - 7. Hafta</span>
+            <h1 class="display-4 fw-bold">Bootstrap ve JavaScript ile etkinlik kaydini tek sayfada yonet</h1>
+            <p class="lead text-secondary mt-3">
+              Bu uygulama, Marmara Teknoloji Bulusmasi icin hazirlanan responsive bir tanitim ve basvuru arayuzudur. Bootstrap bilesenleriyle hizli bir arayuz, JavaScript ile de tema degistirme ve basvuru ozeti deneyimi sunar.
+            </p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a class="btn btn-primary btn-lg px-4" href="#registrationForm">Hemen Basvur</a>
+              <button class="btn btn-outline-dark btn-lg px-4" id="themeToggle" type="button">Temayi Degistir</button>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-3 g-3 mt-4">
+              <div class="col">
+                <div class="stat-chip h-100">
+                  <strong>3 Atolye</strong>
+                  <span>AI, Guvenlik, Web</span>
+                </div>
+              </div>
+              <div class="col">
+                <div class="stat-chip h-100">
+                  <strong>1 Gun</strong>
+                  <span>Yuz yuze etkinlik</span>
+                </div>
+              </div>
+              <div class="col">
+                <div class="stat-chip h-100">
+                  <strong>Bootstrap 5</strong>
+                  <span>Responsive arayuz</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="hero-panel card border-0 shadow-lg">
+              <div class="card-body p-4 p-lg-5">
+                <p class="text-uppercase text-secondary small fw-semibold mb-2">Etkinlik Ozeti</p>
+                <h2 class="h3 mb-3">Marmara Teknoloji Bulusmasi 2026</h2>
+                <p class="text-secondary mb-4">
+                  Sektor konusmalari, uygulamali atolyeler ve networking oturumlariyla dolu bir universite etkinligi.
+                </p>
+                <ul class="list-unstyled mb-0 d-grid gap-3">
+                  <li class="d-flex gap-3 align-items-start">
+                    <span class="hero-icon">01</span>
+                    <div>
+                      <strong class="d-block">Konum</strong>
+                      <span class="text-secondary">Marmara Universitesi, Teknoloji Merkezi</span>
+                    </div>
+                  </li>
+                  <li class="d-flex gap-3 align-items-start">
+                    <span class="hero-icon">02</span>
+                    <div>
+                      <strong class="d-block">Katilim</strong>
+                      <span class="text-secondary">Kontenjan sinirli, kayit zorunlu</span>
+                    </div>
+                  </li>
+                  <li class="d-flex gap-3 align-items-start">
+                    <span class="hero-icon">03</span>
+                    <div>
+                      <strong class="d-block">Icerik</strong>
+                      <span class="text-secondary">Atolye, panel, mentorluk ve proje vitrini</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0 feature-card">
+              <div class="card-body p-4">
+                <span class="feature-tag">Program</span>
+                <h3 class="h4 mt-3">Uygulamali Oturumlar</h3>
+                <p class="text-secondary mb-0">Cybersecurity, yapay zeka ve frontend deneyimi uzerine uygulamali mini atolyeler.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0 feature-card">
+              <div class="card-body p-4">
+                <span class="feature-tag">Konusmacilar</span>
+                <h3 class="h4 mt-3">Sektorden Uzmanlar</h3>
+                <p class="text-secondary mb-0">Muhendisler ve mezunlar, gercek proje deneyimlerini ve kariyer tavsiyelerini paylasacak.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0 feature-card">
+              <div class="card-body p-4">
+                <span class="feature-tag">Kazanim</span>
+                <h3 class="h4 mt-3">Portfolyoya Katki</h3>
+                <p class="text-secondary mb-0">Etkinlik sonunda katilim sertifikasi ve yeni proje fikirleriyle portfolyonu guclendir.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-5">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-7">
+            <div class="card border-0 shadow-lg">
+              <div class="card-body p-4 p-lg-5">
+                <div class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-4">
+                  <div>
+                    <p class="text-uppercase text-secondary small fw-semibold mb-2">Basvuru Formu</p>
+                    <h2 class="h3 mb-0">Etkinlige kaydini tamamla</h2>
+                  </div>
+                  <span class="badge text-bg-light border px-3 py-2">Form yenilenmeden calisir</span>
+                </div>
+
+                <form id="registrationForm" novalidate>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label" for="fullName">Ad Soyad</label>
+                      <input class="form-control form-control-lg" id="fullName" name="fullName" type="text" placeholder="Ornek: Sude Naz Gormez">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="email">E-posta</label>
+                      <input class="form-control form-control-lg" id="email" name="email" type="email" placeholder="ornek@mail.com">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="department">Bolum</label>
+                      <select class="form-select form-select-lg" id="department" name="department">
+                        <option value="">Bolum seciniz</option>
+                        <option>Computer Engineering</option>
+                        <option>Software Engineering</option>
+                        <option>Information Systems Engineering</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="session">Ilgi duydugun oturum</label>
+                      <select class="form-select form-select-lg" id="session" name="session">
+                        <option value="">Oturum seciniz</option>
+                        <option value="Cybersecurity Bootcamp">Cybersecurity Bootcamp</option>
+                        <option value="AI for Students">AI for Students</option>
+                        <option value="Modern Web UI">Modern Web UI</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label" for="motivation">Katilim amacin</label>
+                      <textarea class="form-control" id="motivation" name="motivation" rows="5" placeholder="Bu etkinlige neden katilmak istedigini kisaca yaz."></textarea>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="onaylandi" id="agreement" name="agreement">
+                        <label class="form-check-label" for="agreement">
+                          Etkinlik bilgilendirme maillerini almayi ve kayit kosullarini kabul ediyorum.
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-12 d-flex flex-wrap gap-3 pt-2">
+                      <button class="btn btn-primary btn-lg px-4" type="submit">Basvuru Ozetini Olustur</button>
+                      <button class="btn btn-outline-secondary btn-lg px-4" type="reset" id="resetSummary">Formu Temizle</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="card border-0 shadow-lg result-card">
+              <div class="card-body p-4 p-lg-5">
+                <p class="text-uppercase text-secondary small fw-semibold mb-2">Sonuc Alani</p>
+                <h2 class="h3 mb-3">Basvuru Ozetin</h2>
+                <div id="feedbackBox" class="alert alert-warning d-none" role="alert"></div>
+                <div id="summaryBox" class="summary-placeholder">
+                  <p class="mb-0 text-secondary">
+                    Formu doldurdugunda burada etkinlik basvuru ozetin dinamik olarak olusacak.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4 border-top">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <p class="mb-0">Sude Naz Gormez Portfolio - Hafta 7 Bootstrap Lab</p>
+      <p class="mb-0 text-secondary">JavaScript ile tema degistirme ve basvuru ozeti olusturma uygulamasi</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts/hafta7.js"></script>
+</body>
+</html>
